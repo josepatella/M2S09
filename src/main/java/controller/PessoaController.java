@@ -26,4 +26,12 @@ public class PessoaController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<Pessoa> listaPessoaId(@PathVariable Long id){
+
+        Pessoa response = service.ListaPessoaId(id);
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
 }
